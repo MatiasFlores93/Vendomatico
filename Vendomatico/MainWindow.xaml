@@ -1,0 +1,78 @@
+﻿<Window x:Class="Vendomatico.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="550" Width="825" Loaded="Window_Loaded">
+    <Grid >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="230"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+            <ColumnDefinition Width="1*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.RowSpan="3" Background="Gray">
+            <Button Margin="3" Padding="3" Name="btnMantenedor" Click="btnMantenedor_Click">Mantenedor</Button>
+        </StackPanel>
+        <StackPanel Grid.Column="1" Name="op1">
+            <Image Source="imagenes/Tras.jpg" Name="op1Imagen"></Image>
+            <DockPanel Height="20" VerticalAlignment="Center" >
+                <TextBlock Text="auto" Name="op1Nombre"></TextBlock>
+           </DockPanel>
+            
+        </StackPanel>
+        <StackPanel Grid.Column="2" Name="op2">
+            <Image Source="imagenes/Tras.jpg" Name="op2Imagen"></Image>
+            <TextBlock Text="auto" Name="op2Nombre"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="3" Name="op3">
+            <Image Source="imagenes/Tras.jpg" Name="op3Imagen"></Image>
+            <TextBlock Text="auto" Name="op3Nombre"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="4" Name="op4">
+            <Image Source="imagenes/Tras.jpg" Name="op4Imagen"></Image>
+            <TextBlock Text="auto" Name="op4Nombre"></TextBlock>
+        </StackPanel>
+        
+        <!-- SEGUNDA FILA-->
+        <StackPanel Grid.Column="1" Grid.Row="1" Name="op5">
+            <Image Source="imagenes/Tras.jpg"></Image>
+            <TextBlock Text="auto" Name="op5Nombre"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="1" Name="op6">
+            <Image Source="imagenes/Tras.jpg"></Image>
+            <TextBlock Text="auto" Name="op6Nombre"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="3" Grid.Row="1" Name="op7">
+            <Image Source="imagenes/Tras.jpg"></Image>
+            <TextBlock Text="auto" Name="op7Nombre"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="4" Grid.Row="1" Name="op8">
+            <Image Source="imagenes/Tras.jpg"></Image>
+            <TextBlock Text="auto" Name="op8Nombre"></TextBlock>
+        </StackPanel>
+
+        <!-- TERCERA FILA-->
+        <StackPanel Grid.Column="1" Grid.Row="2" Name="op9">
+            <Image Source="imagenes/Tras.jpg"></Image>
+            <TextBlock Text="auto" Name="op9Nombre"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="2" Name="op10">
+            <Image Source="imagenes/Tras.jpg"></Image>
+            <TextBlock Text="auto" Name="op10Nombre"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="3" Grid.Row="2" Name="op11">
+            <Image Source="imagenes/Tras.jpg"></Image>
+            <TextBlock Text="auto" Name="op11Nombre"></TextBlock>
+        </StackPanel>
+        <StackPanel Grid.Column="4" Grid.Row="2" Name="op12">
+            <Image Source="imagenes/Tras.jpg"></Image>
+            <TextBlock Text="auto" Name="op12Nombre"></TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>

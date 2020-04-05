@@ -1,0 +1,100 @@
+﻿<Window x:Class="Vendomatico.Mantenedor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Loaded="Window_Loaded">
+         
+    <Grid Margin="7" Background="White" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+            <!--En esta fila va el ListBox-->
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <!--Aqui va un grid secundario-->
+        </Grid.ColumnDefinitions>
+
+        <!--Display Member es la propiedad del objeto que se muestra como texto en el listbox-->
+        <ListBox Background="LightGray" Margin="7" Name="lstAutos" DisplayMemberPath="Nombre"></ListBox>
+
+        <!--Grid secundario  de 3 filas x 1 columna-->
+        <Grid Grid.Column="1" Background="LightGreen" Margin="0,7,7,7">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <!--En esta fila va el Grid de detalles de contacto-->
+                <RowDefinition Height="Auto"></RowDefinition>
+                <!-- fila para un grid uniforme donde estan anidados los botones nuevo, modificar y eliminar-->
+                <RowDefinition Height="Auto"></RowDefinition>
+                <!-- fila para un grid uniforme donde estan anidados los botones guardar, actualizar y cancelar-->
+            </Grid.RowDefinitions>
+
+            <!--Grid detalles de contacto-->
+            <Grid Name="gridDetallesDeContacto" Grid.Row="0" Margin="7" Background="Bisque" 
+                  DataContext="{Binding ElementName= lstContactos, Path= SelectedItem}">
+                <!--La propiedad DataContext del gridDetallesDeContacto permite a los TextBoxes anidados en él, 
+                saber de donde van a extraer la información que van a mostrar en su propiedad Text, en este caso la información 
+                se extrae de la propiedad SelectedItem del elemento lstContactos (el listbox de contactos).
+                SelectedItem (el item que se selecciona en el listbox) viene siendo un objeto de tipo ContactoEmpresaZeta)                  
+               -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Margin="5">Id:</TextBlock>
+                <TextBox Grid.Column="1" Margin="5" 
+                         Text="{Binding Path=Id}" IsReadOnly="True" Name="txtId"></TextBox>
+
+                <TextBlock Margin="5" Grid.Row="1" Text="Nombre:"></TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="1" Margin="5" 
+                         Text="{Binding Path=Nombre, UpdateSourceTrigger=Explicit}" 
+                         IsReadOnly="True" Name="txtNombre"></TextBox>
+                <!--Este TextBox va a mostrar la información contenida en la propiedad Nombres del item seleccionado en el list box de contactos -->
+
+                <!--UpdateSourceTrigger es el modo en el que se propaga el valor de la propiedad Text de los textBoxes hacia el objeto
+                origen en este caso el item seleccionado del listbox, por defecto los TextBoxes lo propagan cuando pierden el foco
+                (LostFocus) pero al establecer que es Explicit significa que yo voy a decidir, mediante programación,
+                en que momento propagarlo.-->
+
+                <!--ver http://msdn.microsoft.com/es-es/library/system.windows.data.binding.updatesourcetrigger.aspx-->
+
+                <TextBlock Margin="5" Grid.Row="2" Text="Cantidad:"></TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="2" Margin="5" 
+                         Text="{Binding Path=Apellidos, UpdateSourceTrigger=Explicit}"
+                         IsReadOnly="True" Name="txtCantidad"></TextBox>
+
+                <TextBlock Margin="5" Grid.Row="3" Text="Precio:"></TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="3" Margin="5" 
+                         Text="{Binding Path=Telefono, UpdateSourceTrigger=Explicit}" 
+                         IsReadOnly="True" Name="txtPrecio" DataContext="{Binding}"></TextBox>
+
+                <TextBlock Margin="5" Grid.Row="4" Text="Imagen:"></TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="4" Margin="5" 
+                         Text="{Binding Path=Direccion, UpdateSourceTrigger=Explicit}" 
+                         IsReadOnly="True" Name="txtImagen"></TextBox>
+            </Grid>
+
+            <!--Grid uniforme donde estan anidados los botones nuevo, modificar y eliminar-->
+            <UniformGrid Grid.Row="1" Background="Blue" Margin="7,0,7,7" Columns="3" Name="uGridNuevoModificarEliminar">
+                <Button Margin="3" Padding="3" Name="btnNuevo" Click="btnNuevo_Click">Nuevo</Button>
+                <Button Margin="3" Padding="3" Name="btnModificar" Click="btnModificar_Click">Modificar</Button>
+                <Button Margin="3" Padding="3" Name="btnEliminar">Eliminar</Button>
+            </UniformGrid>
+
+            <!--Grid uniforme donde estan anidados los botones guardar, actualizar y cancelar-->
+            <UniformGrid Grid.Row="2" Background="red" Margin="7,0,7,7" Columns="3" Name="uGridGuardarActualizarCancelar">
+                <Button Margin="3" Padding="3" Name="btnGuardar" Click="btnGuardar_Click" IsEnabled="False">Guardar</Button>
+                <Button Margin="3" Padding="3" Name="btnActualizar" IsEnabled="False" Click="btnActualizar_Click">Actualizar</Button>
+                <Button Margin="3" Padding="3" Name="btnCancelar" IsEnabled="False">Cancelar</Button>
+            </UniformGrid>
+
+        </Grid>
+    </Grid>
+
+
+</Window>

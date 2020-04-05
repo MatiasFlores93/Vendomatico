@@ -1,0 +1,17 @@
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\bin\Debug\Vendomatico.exe
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\bin\Debug\Vendomatico.pdb
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\MainWindow.baml
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\MainWindow.g.cs
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\App.g.cs
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\Vendomatico_MarkupCompile.cache
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\Vendomatico.g.resources
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\Vendomatico.Properties.Resources.resources
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\Vendomatico.exe
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\Vendomatico.pdb
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\App.baml
+c:\users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\bin\Debug\Vendomatico.exe.config
+C:\Users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\Mantenedor.baml
+C:\Users\18789183-3\documents\visual studio 2010\Projects\Vendomatico\Vendomatico\obj\x86\Debug\Mantenedor.g.cs
